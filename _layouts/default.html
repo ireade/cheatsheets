@@ -1,0 +1,49 @@
+---
+---
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+      {% if page.title %}
+        {{ page.title | escape }} | {{ site.title | escape }}
+      {% else %}
+        {{ site.title | escape }}
+      {% endif %}
+    </title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <link rel="stylesheet" href="{{ "assets/css/main.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  </head>
+
+
+  <body>
+
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="cheatsheets-title">Cheatsheets</a> from <a href="http://bitsofco.de" class="bitsofcode-title">bitsofco.de</a>
+      </div>
+    </header>
+  
+    <div class="container">
+      {{ content }}
+
+      <footer class="site-footer">
+        Copyright <a href="https://twitter.com/ireaderinokun">@IreAderinokun</a> from <a href="http://bitsofco.de">bitsofco.de</a>
+      </footer>
+    </div>
+
+    
+    
+  
+    <script src="//cdn.jsdelivr.net/caniuse-embed/1.0.0/caniuse-embed.min.js"></script>
+    <script src="{{ "assets/js/script.js" | prepend: site.baseurl }}"></script>
+  </body>
+
+</html>

@@ -1,0 +1,35 @@
+/* *************
+
+	MAIN
+	
+*************** */
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,300,700,700italic);
+
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+
+$font-family: 'Open Sans', sans-serif;
+$code-font-family: 'Source Code Pro', monospace;
+
+
+
+$theme: #ffdb3a;
+$med-grey: rgb(210, 210, 210);
+
+
+// Imports
+
+@import 
+	'reset',
+	'type',
+	'layout',
+	'cheatsheet'
+;
+
+
+@import
+	'cheatsheets/flex'
+;
+

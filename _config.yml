@@ -1,0 +1,26 @@
+# Site settings
+title: Cheatsheets from bitsofcode
+email: ire@ireaderinokun.com
+description: Cheatsheets for CSS Features
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://cheatsheets.bitsofco.de" # the base hostname & protocol for your site
+twitter_username: ireaderinokun
+github_username:  ireade
+
+
+# Custom Collection
+collections:
+  cheatsheets:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - 
+    scope:
+      type: "cheatsheets"
+    values:
+      layout: "cheatsheet"
+      collection: "cheatsheets"
+
+# Build settings
+markdown: kramdown

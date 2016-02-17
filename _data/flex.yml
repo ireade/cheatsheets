@@ -1,0 +1,264 @@
+
+
+properties:
+
+# *************
+# FLEX CONTAINER
+# ************* 
+- {
+  property: 'display',
+  applies-to: 'Flex Container',
+  description: 'Sets the container as a flexbox element',
+  values: [
+    {
+      value: 'flex',
+      description: 'Flex container as a block flex element', 
+    },
+    {
+      value: 'inline-flex',
+      description: 'Flex container as an inline flex element', 
+    }
+  ]
+}
+- {
+  property: 'flex-direction',
+  applies-to: 'Flex Container',
+  description: 'Sets the direction in which the flex items flow',
+  values: [
+    {
+      value: 'row',
+      description: '',
+      default: true 
+    },
+    {
+      value: 'row-reverse',
+      description: '', 
+    },
+    {
+      value: 'column',
+      description: '', 
+    },
+    {
+      value: 'column-reverse',
+      description: '', 
+    }
+  ]
+}
+- {
+  property: 'flex-wrap',
+  applies-to: 'Flex Container',
+  description: 'Sets how the flex items should wrap if they cannot fit on one row',
+  values: [
+    {
+      value: 'no-wrap',
+      description: '',
+      default: true 
+    },
+    {
+      value: 'wrap',
+      description: '', 
+    },
+    {
+      value: 'wrap-reverse',
+      description: '', 
+    },
+  ]
+}
+- {
+  property: 'justify-content',
+  applies-to: 'Flex Container',
+  description: 'Sets the horizontal alignment of the flex items within the container',
+  values: [
+    {
+      value: 'flex-start',
+      description: '',
+      default: true 
+    },
+    {
+      value: 'flex-end',
+      description: '', 
+    },
+    {
+      value: 'center',
+      description: '', 
+    },
+    {
+      value: 'space-between',
+      description: '', 
+    },
+    {
+      value: 'space-around',
+      description: '', 
+    }
+  ]
+}
+- {
+  property: 'align-items',
+  applies-to: 'Flex Container',
+  description: 'Sets the vertical alignment of the flex items within the container',
+  values: [
+    {
+      value: 'flex-start',
+      description: '',
+      default: true 
+    },
+    {
+      value: 'flex-end',
+      description: '', 
+    },
+    {
+      value: 'center',
+      description: '', 
+    },
+    {
+      value: 'baseline',
+      description: '', 
+    },
+    {
+      value: 'stretch',
+      description: '', 
+    }
+  ]
+}
+- {
+  property: 'align-content',
+  applies-to: 'Flex Container',
+  description: 'Sets the vertical spacing between elements',
+  values: [
+    {
+      value: 'flex-start',
+      description: '',
+      default: true 
+    },
+    {
+      value: 'flex-end',
+      description: '', 
+    },
+    {
+      value: 'center',
+      description: '', 
+    },
+    {
+      value: 'stretch',
+      description: '', 
+    },
+    {
+      value: 'space-between',
+      description: '', 
+    },
+    {
+      value: 'space-around',
+      description: '', 
+    },
+  ]
+}
+
+
+# *************
+# FLEX ITEMS
+# ************* 
+- {
+  property: 'align-self',
+  applies-to: 'Flex Items',
+  description: 'Sets the vertical alignment the current flex item',
+  values: [
+    {
+      value: 'auto',
+      description: '',
+      default: true 
+    },
+    {
+      value: 'flex-start',
+      description: '', 
+    },
+    {
+      value: 'flex-end',
+      description: '', 
+    },
+    {
+      value: 'center',
+      description: '', 
+    },
+    {
+      value: 'baseline',
+      description: '', 
+    },
+    {
+      value: 'stretch',
+      description: '', 
+    }
+  ]
+}
+- {
+  property: 'flex-grow',
+  applies-to: 'Flex Items',
+  description: 'Increases the size of the current item relative to its siblings',
+  dynamic_values: true,
+  value: 'number',
+  values: [
+    {
+      value: '0',
+      description: '',
+      default: true 
+    },
+    {
+      value: '1',
+      description: '', 
+    },
+    {
+      value: '2',
+      description: '', 
+    },
+  ]
+}
+- {
+  property: 'flex-shrink',
+  applies-to: 'Flex Items',
+  description: 'Decreases the size of the current item relative to its siblings',
+  dynamic_values: true,
+  value: 'number',
+  values: [
+    {
+      value: '0',
+      description: '',
+      default: true 
+    },
+    {
+      value: '10',
+      description: '', 
+    },
+    {
+      value: '5',
+      description: '', 
+    },
+  ]
+}
+- {
+  property: 'order',
+  applies-to: 'Flex Items',
+  description: 'Defines the order the current item is within its siblings',
+  dynamic_values: true,
+  value: 'integer',
+  values: [
+    {
+      value: '0',
+      description: '',
+      default: true 
+    },
+    {
+      value: '-1',
+      description: '', 
+    },
+    {
+      value: '1',
+      description: '', 
+    },
+  ]
+}
+
+
+
+
+
+
+

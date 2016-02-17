@@ -1,0 +1,78 @@
+/* *************
+
+	LAYOUT
+	
+*************** */
+
+html, body {
+	background-color: rgb(245, 245, 245);
+}
+
+.container {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 780px;
+}
+
+
+.site-header {
+	background-color: $theme;
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	font-size: 1.5rem;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.page-header {
+	text-align: center;
+	margin-bottom: 70px;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 1px 1px 3px rgb(230, 230, 230);
+}
+
+
+.site-footer {
+	margin-top: 100px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+
+
+/* Homepage */
+
+.cheatsheet-list {
+	list-style-type: disc;
+	list-style-position: inside;
+
+	li {
+		padding-bottom: 20px;
+	}
+
+	a:visited {
+		border: 1px solid red;
+	}
+
+	a[data-visited] {
+	  border-bottom: 1px dashed purple;
+	}
+
+	a[data-visited]:after {
+	  content: ' (Seen)';
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

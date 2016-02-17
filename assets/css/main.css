@@ -1,0 +1,359 @@
+/* *************
+
+	MAIN
+	
+*************** */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,300,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+/* CSS Reset Based on -
+ *    Eric Meyer's Reset CSS v2.0 (http://cssreset.com)
+ *    Paul Irish's Box Sizing Reset (http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+ *    CSS Mojo's clearfix (http://cssmojo.com/latest_new_clearfix_so_far/)
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Box sizing */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* *************
+
+	TYPE
+	
+*************** */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 1;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+header {
+  display: block;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+.cf {
+  font-family: "Source Code Pro", monospace;
+}
+
+code {
+  background-color: #fff;
+  font-family: "Source Code Pro", monospace;
+}
+
+a,
+a:visited {
+  color: #000;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.page-subtitle {
+  font-style: italic;
+}
+
+.cheatsheet-header-intro {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.site-footer {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+/* *************
+
+	LAYOUT
+	
+*************** */
+html, body {
+  background-color: whitesmoke;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 780px;
+}
+
+.site-header {
+  background-color: #ffdb3a;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 70px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 1px 1px 3px #e6e6e6;
+}
+
+.site-footer {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Homepage */
+.cheatsheet-list {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.cheatsheet-list li {
+  padding-bottom: 20px;
+}
+
+.cheatsheet-list a:visited {
+  border: 1px solid red;
+}
+
+.cheatsheet-list a[data-visited] {
+  border-bottom: 1px dashed purple;
+}
+
+.cheatsheet-list a[data-visited]:after {
+  content: ' (Seen)';
+}
+
+/* *************
+
+	CHEATSHEET
+	
+*************** */
+.cheatsheet-section {
+  border-bottom: 1px solid #d2d2d2;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+}
+
+/* Table of Contents */
+.cheatsheet-contents ol {
+  list-style-position: inside;
+  margin-left: 20px;
+}
+
+.cheatsheet-contents ol li {
+  padding-bottom: 10px;
+}
+
+/* Table */
+.property-table {
+  border: 3px solid #d2d2d2;
+  background-color: #fafafa;
+  width: 100%;
+  margin: 2em 0;
+  font-size: 1.5rem;
+}
+
+.property-table thead {
+  font-weight: 700;
+  text-align: left;
+  background-color: #e6e6e6;
+}
+
+.property-table thead tr th {
+  padding: 7px;
+}
+
+.property-table tr {
+  border-bottom: 3px solid #d2d2d2;
+}
+
+.property-table td, .property-table th {
+  border-right: 3px solid #d2d2d2;
+  padding: 10px;
+}
+
+.property-table-default td.property,
+.property-table-default th.property {
+  width: 20%;
+}
+
+.property-table-default td.description,
+.property-table-default th.description {
+  width: 40%;
+}
+
+.property-table-default td.values,
+.property-table-default th.values {
+  width: 40%;
+}
+
+/* */
+.property-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #646464;
+}
+
+.property-section-header {
+  margin-bottom: 30px;
+}
+
+.property-value-section {
+  margin-bottom: 20px;
+}
+
+.property-value-section .example {
+  background-color: #fff;
+}
+
+.property-value-section-header {
+  background-color: #d2d2d2;
+  padding: 10px;
+}
+
+.property-value-section-header p {
+  margin-top: 10px;
+  display: block;
+}
+
+/* *************
+
+	CHEATSHEET- FLEX
+	
+*************** */
+.flex-container {
+  min-height: 100px;
+  border: 2px solid #646464;
+}
+
+.flex-container-example .flex-container {
+  display: flex;
+}
+
+.flex-container-example .flex-container.flex-wrap,
+.flex-container-example .flex-container.align-content {
+  max-width: 150px;
+}
+
+.flex-container-example .flex-container.align-content {
+  flex-wrap: wrap;
+  min-height: 200px;
+}
+
+.flex-item-example .flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-item-example .example-flex-item {
+  border: 5px solid #000;
+  line-height: 40px;
+}
+
+.flex-item {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.flex-item:nth-child(1) {
+  background-color: #0074D9;
+}
+
+.flex-item:nth-child(2) {
+  background-color: #3D9970;
+}
+
+.flex-item:nth-child(3) {
+  background-color: #FF4136;
+}
+
+.flex-item:nth-child(4) {
+  background-color: #FFDC00;
+}
+
+.flex-item:nth-child(5) {
+  background-color: #B10DC9;
+}
+
+.flex-item:nth-child(6) {
+  background-color: #85144b;
+}
