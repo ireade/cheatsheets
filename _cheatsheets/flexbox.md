@@ -2,13 +2,9 @@
 title: Flexbox
 data_file: flex
 
-intro: 'Understanding flexbox'
+intro: ''
 
 contents: 
-- {
-  title: 'Introduction',
-  link: '#intro'
-}
 - {
   title: 'Properties Overview',
   link: '#property-overview'

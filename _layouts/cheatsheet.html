@@ -21,10 +21,12 @@ layout: default
 	</section>
 	
 	<!-- Introduction -->
+	{% if page.intro != "" %}
 	<section id="intro" class="cheatsheet-section">
 		<h2>Introduction</h2>
 		{{ page.intro }}
 	</section>
+	{% endif %}
 
 	
 	<!-- Table -->	
