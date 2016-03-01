@@ -24,3 +24,5 @@ defaults:
 
 # Build settings
 markdown: kramdown
+
+exclude: ['development', 'node_modules']
