@@ -1,0 +1,46 @@
+---
+title: Object-Fit/Position
+data_file: object-fit-position
+---
+
+<section id="properties-detail" class="cheatsheet-section">
+  <h2>Detail</h2>
+
+  {% for property in site.data[page.data_file]properties %}
+  <section id="{{property.property}}" class="property-section">
+
+    <header class="property-section-header">
+      <h3 class="property-header cf">
+        <div class="arrow toggle-values-display open" aria-label="Toggle Values"></div> 
+        {{property.property}}
+      </h3>
+    </header>
+
+    {% for value in property.values %}
+    <section id="{{property.property}}-{{value.value}}" class="property-value-section">
+
+      <header class="property-value-section-header">
+        <h4 class="cf">{{property.property}}: {{value.value}};</h4>
+        {% if value.description && value.description != '' %}<p>{{value.description}}</p>{% endif %}
+      </header>
+
+      <div class="example">
+        <div class="{{property.property}}" style=" padding: 10px;">
+          <img src="http://bitsofco.de/content/images/2016/01/JandReyCircleSolid-1.png" style="{{property.property}}: {{value.value}}; border: 2px solid black; height: 150px; width: 150px; margin-right: 10px;">
+
+          <img src="http://bitsofco.de/content/images/2016/01/JandReyCircleSolid-1.png" style="{{property.property}}: {{value.value}}; border: 2px solid black; height: 300px; width: 150px; margin-right: 10px;">
+
+          <img src="http://bitsofco.de/content/images/2016/01/JandReyCircleSolid-1.png" style="{{property.property}}: {{value.value}}; border: 2px solid black; height: 150px; width: 300px; margin-right: 10px;">
+        </div>
+      </div>
+
+    </section>
+    {% endfor %}
+  </section>
+  {% endfor %}
+</section>
+
+
+
+
+

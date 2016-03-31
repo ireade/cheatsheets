@@ -1,0 +1,20 @@
+properties:
+
+- {
+  property: 'text-align',
+  values: [
+    {
+      value: 'left',
+      default: true
+    },
+    {
+      value: 'right',
+    },
+    {
+      value: 'center',
+    },
+    {
+      value: 'justify',
+    }
+  ]
+}

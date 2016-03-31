@@ -2,13 +2,14 @@
 layout: default
 ---
 <header class="page-header cheatsheet-header">
-	<p class="page-subtitle">The Cheatsheet For</p><br>
+	<p class="page-subtitle">The Cheatsheet For</p>
 	<h1>{{ page.title | escape }}</h1>
 </header>
 
 <main class="page-main">
 	
 	<!-- Contents -->
+	{% if page.contents && page.contents != "" %}
 	<section id="contents" class="cheatsheet-section">
 		<h2>Contents</h2>
 		<nav class="cheatsheet-contents">
@@ -19,9 +20,10 @@ layout: default
 	      </ol>
 	  </nav>
 	</section>
+	{% endif %}
 	
 	<!-- Introduction -->
-	{% if page.intro != "" %}
+	{% if page.intro && page.intro != "" %}
 	<section id="intro" class="cheatsheet-section">
 		<h2>Introduction</h2>
 		{{ page.intro }}
@@ -31,8 +33,7 @@ layout: default
 	
 	<!-- Table -->	
 	<section id="property-overview" class="cheatsheet-section">
-		<h2>Properties Overview</h2>
-
+		<h2>Overview</h2>
 		<table class="property-table property-table-default">
 		  <thead>
 		    <tr>
@@ -42,7 +43,6 @@ layout: default
 		    </tr>
 		  </thead>
 		  <tbody>
-
 
 		    {% for property in site.data[page.data_file].properties %}
 
@@ -63,25 +63,24 @@ layout: default
 
 		      </td>
 		    </tr>
-
-		    {% endfor %}
-		    
+		    {% endfor %}		    
 		  </tbody>
 		</table>
-
 	</section>
 	
 
 
-	<!-- Other -->
+	<!-- Other Stuff -->
 	{{ content }}
 
 
 	<!-- Support -->
+	{% if page.support_tables && page.support_tables != "" %}
 	<section id="support" class="cheatsheet-section">
 		<h2>Support</h2>
 		{% for item in page.support_tables %}
 			<p class="ciu_embed" data-feature="{{item.feature}}" data-periods="{{item.periods}}">   <a href="http://caniuse.com/#feat={{item.feature}}">Can I Use {{item.feature}}?</a> Data on support for the {{item.feature}} feature across the major browsers from caniuse.com. </p><br>
 		{% endfor %}
 	</section>
+	{% endif %}
 </main>

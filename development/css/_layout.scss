@@ -5,7 +5,7 @@
 *************** */
 
 html, body {
-	background-color: rgb(245, 245, 245);
+	background-color: rgb(250, 250, 250);
 }
 
 .container {
@@ -20,9 +20,17 @@ html, body {
 	display: block;
 	width: 100%;
 	padding: 10px 0;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	text-align: center;
 	margin-bottom: 50px;
+
+	font-style: italic;
+}
+
+.site-main {
+	min-height: 90vh;
+	position: relative;
+	padding-bottom: 100px;
 }
 
 .page-header {
@@ -38,6 +46,11 @@ html, body {
 	margin-top: 100px;
 	margin-bottom: 50px;
 	text-align: center;
+
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
 }
 
 

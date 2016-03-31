@@ -1,0 +1,38 @@
+properties:
+
+- {
+  property: 'object-fit',
+  description: 'Lorem ipsum dolor sit amet.',
+  values: [
+    {
+      value: 'fill',
+      description: 'Lorem ipsum dolor sit amet.',
+    },
+    {
+      value: 'contain',
+    },
+    {
+      value: 'cover',
+    },
+    {
+      value: 'scale-down',
+    },
+    {
+      value: 'none',
+    }
+  ]
+}
+- {
+  property: 'object-position',
+  description: 'Lorem ipsum dolor sit amet.',
+  dynamic_values: true,
+  value: 'position',
+  values: [
+    {
+      value: '50px',
+    },
+    {
+      value: '50% 20%',
+    },
+  ]
+}

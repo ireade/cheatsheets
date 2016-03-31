@@ -1,20 +1,24 @@
 ---
-title: Flexbox
+title: Flexboxible Box Layout Module
 data_file: flex
 
-intro: ''
+intro: 'Blah'
 
 contents: 
 - {
-  title: 'Properties Overview',
+  title: 'Introduction',
+  link: '#intro'
+}
+- {
+  title: 'Overview',
   link: '#property-overview'
 }
 - {
-  title: 'Properties Detail - Flex Container Properties',
+  title: 'Detail - Flex Container Properties',
   link: '#flex-container-properties'
 }
 - {
-  title: 'Properties Detail - Flex Item Properties',
+  title: 'Detail - Flex Item Properties',
   link: '#flex-item-properties'
 }
 - {

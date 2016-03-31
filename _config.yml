@@ -2,8 +2,8 @@
 title: Cheatsheets from bitsofcode
 email: ire@ireaderinokun.com
 description: Cheatsheets for CSS Features
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://cheatsheets.bitsofco.de" # the base hostname & protocol for your site
+baseurl: "/" 
+url: "http://cheatsheets.bitsofco.de"
 twitter_username: ireaderinokun
 github_username:  ireade
 
@@ -22,7 +22,7 @@ defaults:
       layout: "cheatsheet"
       collection: "cheatsheets"
 
+
 # Build settings
 markdown: kramdown
-
-exclude: ['development', 'node_modules']
+exclude: ['development', 'node_modules', 'gulpfile.js', 'package.json']
