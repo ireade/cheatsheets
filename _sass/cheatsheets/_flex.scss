@@ -6,7 +6,7 @@
 
 .flex-container {
 	min-height: 100px;
-	border: 2px solid rgb(100, 100, 100);
+	border: 2px dashed rgb(100, 100, 100);
 }
 
 .flex-container-example {
@@ -58,3 +58,27 @@
 .flex-item:nth-child(4) { background-color: #FFDC00; }
 .flex-item:nth-child(5) { background-color: #B10DC9; }
 .flex-item:nth-child(6) { background-color: #85144b; }
+
+
+
+
+/* */
+
+
+#flex-shrink {
+	.example-flex-item {
+		// width: auto;
+	}
+
+	.flex-item {
+		flex-basis: 50px;
+	}
+}
+
+
+
+
+
+
+
+

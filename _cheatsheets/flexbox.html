@@ -1,0 +1,98 @@
+---
+title: Flexboxible Box Layout Module
+data_file: flexbox
+---
+
+
+<section id="properties-detail" class="cheatsheet-section">
+  <h2>Properties Detail - Flex Container Properties</h2>
+
+  {% for property in site.data[page.data_file]properties %}
+  {% if property.applies-to == 'Flex Container' %}
+  <section id="{{property.property}}" class="property-section">
+
+    <header class="property-section-header">
+      <h3 class="property-header cf">
+        <div class="arrow toggle-values-display open" aria-label="Toggle Values"></div> 
+        {{property.property}}
+      </h3>
+    </header>
+
+    {% for value in property.values %}
+    <section id="{{property.property}}-{{value.value}}" class="property-value-section">
+
+      <header class="property-value-section-header">
+        <h4 class="cf">{{property.property}}: {{value.value}};</h4>
+        {% if value.description && value.description != '' %}<p>{{value.description}}</p>{% endif %}
+      </header>
+
+
+      <div class="example flex-container-example" style="padding: 10px;">
+        <div class="flex-container {{property.property}}" style="{{property.property}}: {{value.value}}">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+        </div>
+      </div>
+
+    </section>
+    {% endfor %}
+    
+  </section>
+  {% endif %}
+  {% endfor %}
+</section>
+
+
+
+
+
+<section id="properties-detail" class="cheatsheet-section">
+  <h2>Properties Detail - Flex Container Properties</h2>
+
+  {% for property in site.data[page.data_file]properties %}
+  {% if property.applies-to == 'Flex Items' %}
+  <section id="{{property.property}}" class="property-section">
+
+    <header class="property-section-header">
+      <h3 class="property-header cf">
+        <div class="arrow toggle-values-display open" aria-label="Toggle Values"></div> 
+        {{property.property}}
+      </h3>
+    </header>
+
+    {% for value in property.values %}
+    <section id="{{property.property}}-{{value.value}}" class="property-value-section">
+
+      <header class="property-value-section-header">
+        <h4 class="cf">{{property.property}}: {{value.value}};</h4>
+        {% if value.description && value.description != '' %}<p>{{value.description}}</p>{% endif %}
+      </header>
+
+
+      <div class="example flex-item-example" style="padding: 10px;">
+        <div class="flex-container {{property.property}}">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item example-flex-item" style="{{property.property}}: {{value.value}}">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+        </div>
+      </div>
+
+    </section>
+    {% endfor %}
+    
+  </section>
+  {% endif %}
+  {% endfor %}
+</section>
+
+
+
+
+
+
+

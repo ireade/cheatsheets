@@ -2,32 +2,41 @@ properties:
 
 - {
   property: 'object-fit',
-  description: 'Lorem ipsum dolor sit amet.',
+  description: 'Specifies how the contents of a replaced element should be fitted to the box established by its used height and width.',
   values: [
     {
       value: 'fill',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: "The replaced content is sized to fill the element's content box.",
+      default: true
     },
     {
       value: 'contain',
+      description: "The replaced content is sized to maintain its aspect ratio while fitting within the element's content box."
     },
     {
       value: 'cover',
+      description: "The replaced content is sized to maintain its aspect ratio while filling the element's entire content box: "
     },
     {
       value: 'scale-down',
+      description: "Size the content as if ‘none’ or ‘contain’ were specified, whichever would result in a smaller concrete object size."
     },
     {
       value: 'none',
+      description: "The replaced content is not resized to fit inside the element's content box"
     }
   ]
 }
 - {
   property: 'object-position',
-  description: 'Lorem ipsum dolor sit amet.',
+  description: 'Determines the alignment of the replaced element inside its box. ',
   dynamic_values: true,
   value: 'position',
   values: [
+    {
+      value: '50% 50%',
+      default: true
+    },
     {
       value: '50px',
     },

@@ -5,9 +5,7 @@ subtitle: A collection of cheatsheets on CSS features and properties
 ---
 
 <ul class="cheatsheet-list">
-	{% for cheatsheet in site.cheatsheets %}
-	<li><a href="{{ cheatsheet.url }}">{{cheatsheet.title}}</a></li>
-	{% endfor %}
+  {% for cheatsheet in site.cheatsheets %}
+  <li><a href="{{ cheatsheet.url }}">{{cheatsheet.title}}</a></li>
+  {% endfor %}
 </ul>
-
-

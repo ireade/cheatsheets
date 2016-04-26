@@ -2,6 +2,7 @@ properties:
 
 - {
   property: 'text-align',
+  description: 'Describes how inline-level content of a block container is aligned.',
   values: [
     {
       value: 'left',

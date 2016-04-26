@@ -1,5 +1,3 @@
-
-
 properties:
 
 # *************
@@ -12,143 +10,127 @@ properties:
   values: [
     {
       value: 'flex',
-      description: 'Flex container as a block flex element', 
+      description: 'This value causes an element to generate a block-level flex container box.', 
     },
     {
       value: 'inline-flex',
-      description: 'Flex container as an inline flex element', 
+      description: 'This value causes an element to generate an inline-level flex container box.', 
     }
   ]
 }
 - {
   property: 'flex-direction',
   applies-to: 'Flex Container',
-  description: 'Sets the direction in which the flex items flow',
+  description: 'Specifies how flex items are placed in the flex container, by setting the direction of the flex container’s main axis.',
   values: [
     {
       value: 'row',
-      description: '',
       default: true 
     },
     {
       value: 'row-reverse',
-      description: '', 
     },
     {
       value: 'column',
-      description: '', 
     },
     {
       value: 'column-reverse',
-      description: '', 
     }
   ]
 }
 - {
   property: 'flex-wrap',
   applies-to: 'Flex Container',
-  description: 'Sets how the flex items should wrap if they cannot fit on one row',
+  description: 'Controls whether the flex container is single-line or multi-line, and the direction of the cross-axis, which determines the direction new lines are stacked in.',
   values: [
     {
       value: 'no-wrap',
-      description: '',
       default: true 
     },
     {
       value: 'wrap',
-      description: '', 
     },
     {
       value: 'wrap-reverse',
-      description: '', 
     },
   ]
 }
 - {
   property: 'justify-content',
   applies-to: 'Flex Container',
-  description: 'Sets the horizontal alignment of the flex items within the container',
+  description: 'Aligns flex items along the main axis of the current line of the flex container.',
   values: [
     {
       value: 'flex-start',
-      description: '',
       default: true 
     },
     {
       value: 'flex-end',
-      description: '', 
     },
     {
       value: 'center',
-      description: '', 
     },
     {
       value: 'space-between',
-      description: '', 
     },
     {
       value: 'space-around',
-      description: '', 
     }
   ]
 }
 - {
   property: 'align-items',
   applies-to: 'Flex Container',
-  description: 'Sets the vertical alignment of the flex items within the container',
+  description: 'Sets the default alignment in the cross axis for all of the flex container’s items, including anonymous flex items.',
   values: [
     {
       value: 'flex-start',
-      description: '',
       default: true 
     },
     {
       value: 'flex-end',
-      description: '', 
+ 
     },
     {
       value: 'center',
-      description: '', 
+ 
     },
     {
       value: 'baseline',
-      description: '', 
+ 
     },
     {
       value: 'stretch',
-      description: '', 
+ 
     }
   ]
 }
 - {
   property: 'align-content',
   applies-to: 'Flex Container',
-  description: 'Sets the vertical spacing between elements',
+  description: 'Aligns a flex container’s lines within the flex container when there is extra space in the cross-axis,',
   values: [
     {
-      value: 'flex-start',
-      description: '',
+      value: 'stretch',
       default: true 
     },
     {
+      value: 'flex-start',
+    },
+    {
       value: 'flex-end',
-      description: '', 
+
     },
     {
       value: 'center',
-      description: '', 
     },
-    {
-      value: 'stretch',
-      description: '', 
-    },
+    
     {
       value: 'space-between',
-      description: '', 
     },
     {
       value: 'space-around',
-      description: '', 
+
     },
   ]
 }
@@ -160,98 +142,73 @@ properties:
 - {
   property: 'align-self',
   applies-to: 'Flex Items',
-  description: 'Sets the vertical alignment the current flex item',
+  description: 'Sets the alignment in the cross axis for the current flex item',
   values: [
     {
       value: 'auto',
-      description: '',
       default: true 
     },
     {
       value: 'flex-start',
-      description: '', 
     },
     {
       value: 'flex-end',
-      description: '', 
     },
     {
       value: 'center',
-      description: '', 
     },
     {
       value: 'baseline',
-      description: '', 
     },
     {
       value: 'stretch',
-      description: '', 
     }
   ]
 }
+
 - {
-  property: 'flex-grow',
+  property: 'flex',
   applies-to: 'Flex Items',
-  description: 'Increases the size of the current item relative to its siblings',
+  description: "Specifies the components of a flexible length: the flex grow factor and flex shrink factor, and the flex basis.",
   dynamic_values: true,
-  value: 'number',
+  value: 'flex-grow flex-shrink flex-basis',
   values: [
     {
-      value: '0',
-      description: '',
+      value: '0 1 auto',
       default: true 
     },
     {
-      value: '1',
-      description: '', 
+      value: '3 0 auto',
+      description: "flex-grow at 3"
     },
     {
-      value: '2',
-      description: '', 
-    },
-  ]
-}
-- {
-  property: 'flex-shrink',
-  applies-to: 'Flex Items',
-  description: 'Decreases the size of the current item relative to its siblings',
-  dynamic_values: true,
-  value: 'number',
-  values: [
-    {
-      value: '0',
-      description: '',
-      default: true 
+      value: '0 1 50%',
+      description: "flex-basis at 50%"
     },
     {
-      value: '10',
-      description: '', 
+      value: '0 3 auto',
+      description: "flex-shrink at 3"
     },
-    {
-      value: '5',
-      description: '', 
-    },
+    
   ]
 }
 - {
   property: 'order',
   applies-to: 'Flex Items',
-  description: 'Defines the order the current item is within its siblings',
+  description: 'Controls the order in which children of a flex container appear within the flex container, by assigning them to ordinal groups.',
   dynamic_values: true,
   value: 'integer',
   values: [
     {
       value: '0',
-      description: '',
       default: true 
     },
     {
       value: '-1',
-      description: '', 
     },
     {
       value: '1',
-      description: '', 
+ 
     },
   ]
 }
